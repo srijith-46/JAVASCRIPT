@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Login Page</title>
+<style>
+body{
+background-color:lavender;
+}
+</style>
+</head>
+<body>
+  <center>
+<h1>Login Page</h1>
+
+<form action="">
+                Username: <input type="text" name="userid" id="text" required><br><br>
+                Password: <input type="password" name="pswrd" id="pass" required><br><br>
+                <input type="button" onclick="check(this.form)" value="Login" required>
+                <input type="reset" value="Reset"/>
+            </form>
+        </center>
+        <script>
+            let userv = /^1[A-ZA-Z0-90-9A-ZA-ZA-Z0-90-90-9]{10,}$/;
+            let passv = /^1[A-ZA-Z0-90-9A-ZA-ZA-Z0-90-90-9]{10,}$/;
+            function check(form){
+                    var userid = form.userid.value;
+                    var pwd = form.pswrd.value;
+                      if ((userv.test(userid)) && (passv.test(pwd))) {
+                        alert("Welcome to WAP LAB");
+                        document.write(Date()+"  "+"welcome"+userid);
+                        document.body.bgColor="green";
+
+                      }
+                      else{
+                        alert("INCORRECT USN OR PASSWORD")
+                      }
+                    }
+                    
+        </script>
+    </body>
+</html>
